@@ -2,7 +2,7 @@
 
 > **⚠️ Bu proje yalnızca eğitim amaçlıdır. Ticari bir amaç içermemektedir.**
 
-
+https://veyse1.github.io/Web-Odev-7/
 
 ---
 
