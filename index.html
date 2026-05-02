@@ -12,10 +12,8 @@
 </head>
 <body>
 
-  <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- ========== FIXED NAVBAR (position: fixed) ========== -->
   <nav class="navbar">
     <a href="#" class="nav-logo">League of Legends</a>
     <ul class="nav-links">
@@ -29,10 +27,8 @@
     <span class="nav-tier">Mitik Eşya</span>
   </nav>
 
-  <!-- ========== PAGE WRAPPER ========== -->
   <div class="page-wrapper">
 
-    <!-- ========== STICKY SIDEBAR (position: sticky) ========== -->
     <aside class="sidebar">
 
       <div class="sidebar-section">
@@ -118,16 +114,12 @@
 
     </aside>
 
-    <!-- ========== MAIN CONTENT ========== -->
     <main class="main-content">
 
-      <!-- ===== HERO ===== -->
       <section class="hero" id="hero">
 
-        <!-- RELATIVE container + ABSOLUTE badge -->
         <div class="item-icon-container">
 
-          <!-- ABSOLUTE badge -->
           <span class="item-badge mythic">MİTİK</span>
           <span class="item-badge" style="top:auto;bottom:-10px;right:-14px;font-size:0.55rem;">YENİ</span>
 
@@ -136,7 +128,6 @@
             <div class="rune-ring-2"></div>
             <div class="item-icon" title="Gölge Yemini">🗡️</div>
 
-            <!-- Partiküller -->
             <div class="particles">
               <span class="particle"></span>
               <span class="particle"></span>
@@ -156,7 +147,6 @@
         </p>
       </section>
 
-      <!-- ===== STATS ===== -->
       <section id="stats">
         <div class="divider"><span class="divider-icon">✦ İSTATİSTİKLER ✦</span></div>
 
@@ -194,11 +184,9 @@
         </div>
       </section>
 
-      <!-- ===== ABİLİTİES ===== -->
       <section id="abilities">
         <div class="divider"><span class="divider-icon">✦ YETENEKLERİ ✦</span></div>
 
-        <!-- PASSİVE 1 -->
         <div class="ability-card">
           <div class="ability-header">
             <span class="ability-type-badge unique">UNIQUE</span>
@@ -225,7 +213,6 @@
           </div>
         </div>
 
-        <!-- PASSİVE 2 -->
         <div class="ability-card">
           <div class="ability-header">
             <span class="ability-type-badge unique">UNIQUE</span>
@@ -251,7 +238,6 @@
           </div>
         </div>
 
-        <!-- ACTİVE -->
         <div class="ability-card">
           <div class="ability-header">
             <span class="ability-type-badge unique">UNIQUE</span>
@@ -280,7 +266,6 @@
           </div>
         </div>
 
-        <!-- MYTHİC PASSİVE -->
         <div class="ability-card">
           <div class="ability-header">
             <span class="ability-type-badge" style="color:var(--color-gold);border-color:rgba(200,155,60,0.5);background:rgba(200,155,60,0.1);">MİTİK</span>
@@ -301,7 +286,6 @@
         </div>
       </section>
 
-      <!-- ===== LORE ===== -->
       <section id="lore" class="lore-section">
         <div class="divider"><span class="divider-icon">✦ HİKAYE ✦</span></div>
 
@@ -374,7 +358,6 @@
         </div>
       </section>
 
-      <!-- ===== META ANALİZ ===== -->
       <section id="meta">
         <div class="divider"><span class="divider-icon">✦ META ANALİZ ✦</span></div>
 
@@ -433,7 +416,6 @@
         </div>
       </section>
 
-      <!-- ===== SİNERJİ ===== -->
       <section id="synergy">
         <div class="divider"><span class="divider-icon">✦ UYUMLULUK ✦</span></div>
 
@@ -508,7 +490,6 @@
         </div>
       </section>
 
-      <!-- ===== FİYATLANDIRMA ===== -->
       <section id="pricing">
         <div class="divider"><span class="divider-icon">✦ FİYATLANDIRMA ✦</span></div>
         <p class="section-label">Koleksiyon Paketi</p>
@@ -516,7 +497,6 @@
 
         <div class="pricing-grid">
 
-          <!-- Temel Paket -->
           <div class="pricing-card">
             <div class="pricing-header">
               <span class="pricing-tier-label">STANDART</span>
@@ -539,10 +519,8 @@
             <a href="#" class="btn-secondary" style="width:100%;justify-content:center;margin:0;">Satın Al</a>
           </div>
 
-          <!-- Premium Paket (Öne Çıkan) -->
           <div class="pricing-card featured">
             <div class="pricing-badge-wrap">
-              <!-- position: relative → absolute badge için -->
               <span class="pricing-popular-badge">EN POPÜLER</span>
             </div>
             <div class="pricing-header">
@@ -566,7 +544,6 @@
             <a href="#" class="btn-primary" style="width:100%;justify-content:center;">Hemen Al</a>
           </div>
 
-          <!-- Efsane Paket -->
           <div class="pricing-card">
             <div class="pricing-header">
               <span class="pricing-tier-label" style="color:var(--color-purple-light);">EFSANEVİ</span>
@@ -592,7 +569,6 @@
         </div>
       </section>
 
-      <!-- ===== CTA ===== -->
       <section class="cta-section">
         <div class="divider"><span class="divider-icon">✦</span></div>
         <p class="item-tier" style="margin-bottom:var(--spacing-md);">Suikastçı Yolu Seni Bekliyor</p>
@@ -607,7 +583,6 @@
     </main>
   </div>
 
-  <!-- ========== FOOTER ========== -->
   <footer>
     <div class="footer-top">
       <span class="footer-brand">Gölge Yemini · League of Legends Fan Projesi</span>
@@ -648,7 +623,6 @@
   </footer>
 
   <script>
-    // Scroll progress bar
     const progress = document.getElementById('scrollProgress');
     window.addEventListener('scroll', () => {
       const scrollTop = document.documentElement.scrollTop;
@@ -657,7 +631,6 @@
       progress.style.width = pct + '%';
     });
 
-    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
       navbar.style.borderBottomColor = window.scrollY > 50
@@ -665,7 +638,6 @@
         : 'rgba(200,155,60,0.15)';
     });
 
-    // Item icon easter egg: click to change emoji
     const icons = ['🗡️','⚔️','🌑','💀','🔮','🌒','🪽'];
     let iconIdx = 0;
     document.querySelector('.item-icon').addEventListener('click', function() {
