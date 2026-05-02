@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gölge Yemini — League of Legends Eşyası</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%230a0a0f'/><rect width='64' height='64' rx='8' fill='none' stroke='%23c89b3c' stroke-width='2' opacity='0.6'/><text x='32' y='46' font-size='36' text-anchor='middle' fill='%23c89b3c'>🗡️</text></svg>" />
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== FIXED NAVBAR (position: fixed) ========== -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">League of Legends</a>
+    <ul class="nav-links">
+      <li><a href="#stats">İstatistikler</a></li>
+      <li><a href="#abilities">Yetenekler</a></li>
+      <li><a href="#lore">Hikaye</a></li>
+      <li><a href="#meta">Meta</a></li>
+      <li><a href="#synergy">Uyumluluk</a></li>
+      <li><a href="#pricing" class="nav-pricing-link">💰 Fiyatlar</a></li>
+    </ul>
+    <span class="nav-tier">Mitik Eşya</span>
+  </nav>
+
+  <!-- ========== PAGE WRAPPER ========== -->
+  <div class="page-wrapper">
+
+    <!-- ========== STICKY SIDEBAR (position: sticky) ========== -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <p class="sidebar-title">Maliyet</p>
+        <div class="cost-tag">
+          <span class="cost-icon">🪙</span>
+          <span>3,400</span>
+        </div>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:var(--color-text-muted);letter-spacing:1px;">Toplam Altın</p>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-title">İstatistikler</p>
+        <div class="stat-row">
+          <span class="stat-label">Saldırı Hasarı</span>
+          <span class="stat-value positive">+65</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Yeteneк Hasarı</span>
+          <span class="stat-value positive">+70</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Kritik Şans</span>
+          <span class="stat-value positive">+20%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Hareket Hızı</span>
+          <span class="stat-value positive">+8%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Zırhdelim</span>
+          <span class="stat-value positive">+30</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Ölümcüllük</span>
+          <span class="stat-value positive">+15</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Can Çalma</span>
+          <span class="stat-value positive">+12%</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-title">Yapım Malzemeleri</p>
+        <div class="recipe-items">
+          <span class="recipe-chip" data-tooltip="1.300 Altın">Sersemin Bıçağı</span>
+          <span class="recipe-chip" data-tooltip="900 Altın">Kırmızı Kristal</span>
+          <span class="recipe-chip" data-tooltip="800 Altın">Avlanma Madalyonu</span>
+          <span class="recipe-chip" data-tooltip="400 Altın">Uzun Kılıç</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-title">Önerilen Suikastçılar</p>
+        <ul class="assassin-list">
+          <li>Zed</li>
+          <li>Talon</li>
+          <li>Akali</li>
+          <li>Katarina</li>
+          <li>Qiyana</li>
+          <li>Ekko</li>
+          <li>Fizz</li>
+          <li>Leblanc</li>
+          <li>Shaco</li>
+          <li>Rengar</li>
+          <li>Khazix</li>
+          <li>Nocturne</li>
+          <li>Diana</li>
+          <li>Yone</li>
+          <li>Naafiri</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-title">Mitik Pasif</p>
+        <p style="font-family:var(--font-ui);font-size:0.8rem;color:var(--color-text-secondary);line-height:1.6;">
+          Her Efsanevi eşya başına<br>
+          <span style="color:var(--color-gold-light);font-weight:600;">+5 Ölümcüllük</span> ve
+          <span style="color:var(--color-purple-light);font-weight:600;">+8 YH</span> kazanırsın.
+        </p>
+      </div>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="hero">
+
+        <!-- RELATIVE container + ABSOLUTE badge -->
+        <div class="item-icon-container">
+
+          <!-- ABSOLUTE badge -->
+          <span class="item-badge mythic">MİTİK</span>
+          <span class="item-badge" style="top:auto;bottom:-10px;right:-14px;font-size:0.55rem;">YENİ</span>
+
+          <div class="item-icon-wrapper">
+            <div class="rune-ring"></div>
+            <div class="rune-ring-2"></div>
+            <div class="item-icon" title="Gölge Yemini">🗡️</div>
+
+            <!-- Partiküller -->
+            <div class="particles">
+              <span class="particle"></span>
+              <span class="particle"></span>
+              <span class="particle"></span>
+              <span class="particle"></span>
+              <span class="particle"></span>
+            </div>
+          </div>
+        </div>
+
+        <p class="item-tier">Efsanevi Mitik Eşya · Suikastçı</p>
+        <h1 class="item-name">Gölge Yemini</h1>
+        <p class="item-subtitle">"Umbral Covenant" · Patch 14.9</p>
+        <p class="hero-desc">
+          Karanlığın kendisiyle yapılan kadim bir anlaşmanın ürünü. Taşıyanın gölgesini bir silaha dönüştürür,
+          suikastçının zihnini savaşın ortasında bile buz gibi tutar ve ilk darbede tüm savunmaları yok eder.
+        </p>
+      </section>
+
+      <!-- ===== STATS ===== -->
+      <section id="stats">
+        <div class="divider"><span class="divider-icon">✦ İSTATİSTİKLER ✦</span></div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-card-icon">⚔️</span>
+            <div class="stat-card-value">+65</div>
+            <div class="stat-card-name">Saldırı Hasarı</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-icon">🔮</span>
+            <div class="stat-card-value">+70</div>
+            <div class="stat-card-name">Yetenek Hasarı</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-icon">🎯</span>
+            <div class="stat-card-value">+20%</div>
+            <div class="stat-card-name">Kritik Şans</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-icon">⚡</span>
+            <div class="stat-card-value">+8%</div>
+            <div class="stat-card-name">Hareket Hızı</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-icon">🛡️</span>
+            <div class="stat-card-value">+30</div>
+            <div class="stat-card-name">Zırh Delmek</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-icon">🩸</span>
+            <div class="stat-card-value">+12%</div>
+            <div class="stat-card-name">Fiziksel Can Çalma</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABİLİTİES ===== -->
+      <section id="abilities">
+        <div class="divider"><span class="divider-icon">✦ YETENEKLERİ ✦</span></div>
+
+        <!-- PASSİVE 1 -->
+        <div class="ability-card">
+          <div class="ability-header">
+            <span class="ability-type-badge unique">UNIQUE</span>
+            <span class="ability-type-badge passive">PASİF</span>
+            <span class="ability-name"><span class="highlight">Gölge Addımı</span></span>
+          </div>
+          <p class="ability-desc">
+            Rakip şampiyonları veya yapıları hasar verdiğinde <span class="val">3 saniye</span> süreyle 
+            <span class="val purple">«Gölge Yükü»</span> kazanırsın (maksimum <span class="val">6 yük</span>). 
+            Maksimum yüke ulaştığında bir sonraki becerin veya temel saldırın, hedefin üzerine <span class="val">gölge formu</span> 
+            tetikler: hedef <span class="val">0.35 saniye</span> yerinde donar ve maruz kaldığı tüm hasar 
+            <span class="val purple">%22</span> artar. Bu efekt aynı hedef için <span class="val">8 saniye</span> 
+            yeniden tetiklenemez.
+          </p>
+          <p class="ability-desc">
+            Ayrıca <span class="val">görünmez olduğun veya düşman görüş alanının dışında bulunduğun</span> sürece 
+            hareket hızın ek <span class="val">+12%</span> artar ve bir sonraki saldırın veya becerine 
+            <span class="val">+35</span> bonus fiziksel hasar eklenir (6 sn. bekleme süresi).
+          </p>
+          <div class="ability-meta">
+            <span class="ability-meta-item"><span>Etki:</span> Kontrol + Hasar Artışı</span>
+            <span class="ability-meta-item"><span>Bekleme:</span> 8 sn (per target)</span>
+            <span class="ability-meta-item"><span>Ölçekleme:</span> SD + YH</span>
+          </div>
+        </div>
+
+        <!-- PASSİVE 2 -->
+        <div class="ability-card">
+          <div class="ability-header">
+            <span class="ability-type-badge unique">UNIQUE</span>
+            <span class="ability-type-badge passive">PASİF</span>
+            <span class="ability-name"><span class="highlight">Karanlık Ahit</span></span>
+          </div>
+          <p class="ability-desc">
+            Rakip şampiyona öldürme veya asist sağladığında <span class="val">«Ahit Yığını»</span> kazanırsın. 
+            <span class="val">Her 3 yığında</span> kalıcı olarak <span class="val">+4 Saldırı Hasarı</span> ve 
+            <span class="val">+5 Yetenek Hasarı</span> kazanırsın (maksimum <span class="val">10 yığın</span>). 
+            Yığınlar kaybolmaz; ölümler yığın kaybına neden olmaz.
+          </p>
+          <p class="ability-desc">
+            Maksimum yığına (<span class="val">10</span>) ulaştığında kalıcı olarak 
+            <span class="val purple">Gölge Formu</span>'na geçersin: tüm beceriler rakibi 
+            <span class="val">%8</span> daha hızlı etkiler ve şampiyon ölümlerinden 
+            <span class="val">%20</span> azaltılmış yetenеk geri kazanımı elde edersin.
+          </p>
+          <div class="ability-meta">
+            <span class="ability-meta-item"><span>Maksimum Yığın:</span> 10</span>
+            <span class="ability-meta-item"><span>Max Bonus SD:</span> +40</span>
+            <span class="ability-meta-item"><span>Max Bonus YH:</span> +50</span>
+          </div>
+        </div>
+
+        <!-- ACTİVE -->
+        <div class="ability-card">
+          <div class="ability-header">
+            <span class="ability-type-badge unique">UNIQUE</span>
+            <span class="ability-type-badge active">AKTİF</span>
+            <span class="ability-name"><span class="highlight">Gölge Patlaması</span></span>
+          </div>
+          <p class="ability-desc">
+            Aktif ettiğinde kendini <span class="val">2 saniye</span> süreyle kısmi görünmezliğe büründürürsün 
+            (hareket hızın bu sürede <span class="val">+20%</span> artar; hasar alırsan görünmezlik bozulmaz, 
+            yalnızca son <span class="val">0.5 sn</span> içinde beceri ya da temel saldırı kullanırssan bozulur). 
+            Bu sürenin sonunda veya aktif olarak çıkarsan, seçili bir yönde <span class="val">350 birim</span> 
+            ilerleyip tüm çevreye <span class="val purple">gölge dalgası</span> yayarsın.
+          </p>
+          <p class="ability-desc">
+            Dalga, <span class="val">250 birim</span> yarıçapındaki tüm düşmanlara 
+            <span class="val">(85 + %80 bonus SD + %60 YH)</span> fiziksel+sihir birleşik hasar verir, 
+            hedefleri <span class="val">1 saniye</span> yavaşlatır (<span class="val purple">%45</span>) 
+            ve üzerlerindeki tüm kalkan ve iyileşme efektlerini 
+            <span class="val">3 saniye</span> boyunca <span class="val purple">%50</span> azaltır.
+          </p>
+          <div class="ability-meta">
+            <span class="ability-meta-item"><span>Bekleme Süresi:</span> 90 saniye</span>
+            <span class="ability-meta-item"><span>Menzil:</span> 350 birim atılım + 250 alan</span>
+            <span class="ability-meta-item"><span>Süre:</span> 2 sn görünmezlik</span>
+            <span class="ability-meta-item"><span>Engelleme:</span> Hayır</span>
+          </div>
+        </div>
+
+        <!-- MYTHİC PASSİVE -->
+        <div class="ability-card">
+          <div class="ability-header">
+            <span class="ability-type-badge" style="color:var(--color-gold);border-color:rgba(200,155,60,0.5);background:rgba(200,155,60,0.1);">MİTİK</span>
+            <span class="ability-type-badge passive">PASİF</span>
+            <span class="ability-name"><span class="highlight">Suikastçı'nın Mirası</span></span>
+          </div>
+          <p class="ability-desc">
+            Sahip olduğun her Efsanevi eşya başına <span class="val">+5 Ölümcüllük</span> ve 
+            <span class="val purple">+8 Yetenek Hasarı</span> kazanırsın. Bu etkiler Efsanevi eşya 
+            limiti olmaksızın sınırsız birikir. Gölge Yemini ile birlikte <span class="val">Raider's Gambit</span> 
+            veya <span class="val">Void Prowl</span> eşyasını taşıyorsan, Gölge Addımı'nın hasar artışı 
+            <span class="val">%22</span>'den <span class="val purple">%30</span>'a yükselir.
+          </p>
+          <div class="ability-meta">
+            <span class="ability-meta-item"><span>Tür:</span> Mitik Pasif (Çakışmaz)</span>
+            <span class="ability-meta-item"><span>Sinerjisi:</span> Raider's Gambit / Void Prowl</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== LORE ===== -->
+      <section id="lore" class="lore-section">
+        <div class="divider"><span class="divider-icon">✦ HİKAYE ✦</span></div>
+
+        <p class="section-label">Kadim Anlatı</p>
+        <h2 class="section-title">Gölge ile Yapılan Ahit</h2>
+
+        <div class="lore-container">
+
+          <blockquote class="lore-quote">
+            "Gölgen senden daha hızlı koşar, senden daha güçlü düşünür ve senden çok daha uzun yaşar.
+            Bırak o konuşsun — sadece bıçağı tut."
+            <cite>— Zed, Gölge Ninjalarının Ustası</cite>
+          </blockquote>
+
+          <h3 class="lore-chapter">I. Kökenlerin Gecesi</h3>
+          <p class="lore-text">
+            Noxus'un altın çağı olarak bilinen dönemden çok önce, Ionia'nın yüksek dağlarında yaşlı bir demirci 
+            vardı. Adı Rhaek'ti; ama onu tanıyanlar yalnızca "Karanlık El" diye çağırırdı. Rhaek, kırk yıl boyunca 
+            sıradan silahlar döktü — kılıçlar, hançerler, zırhlar. Her biri ustaca yapılmıştı ama hiçbirinde 
+            <em>ruh</em> yoktu. Rhaek bunu biliyordu ve bu bilgi onu her geçen yıl biraz daha kemiriyordu.
+          </p>
+          <p class="lore-text">
+            Bir kış gecesi, atölyesinin çatısı çökmek üzereyken ve son mumun alevi sönerken, Rhaek bir ses işitti. 
+            Ses duvarlarda değil; kendi gölgesinden geliyordu. "Bana bir biçim ver," dedi gölge. "Ben sana 
+            <em>anlam</em> veririm." Rhaek korktu. Ama yorgundu, yaşlıydı ve hayatı boyunca bir şeyler 
+            yaratmayı istemişti — gerçekten yaratmayı. Gölgeyle ahit yaptı.
+          </p>
+
+          <h3 class="lore-chapter">II. Dövme ve Bedel</h3>
+          <p class="lore-text">
+            Yedi gün yedi gece aralıksız çalıştı Rhaek. Kullandığı metal sıradan değildi: Void'dan sızan kara 
+            kristal kırıkları, Bilgewater'da boğulmuş bir deniz cadısının kemikleri ve en önemlisi — kendi 
+            kanından damıtılmış üç damla. Gölge ona her adımda rehberlik etti; hangi metali kaç dereceye 
+            ısıtacağını, çekicin nereye ineceğini, soğutma suyuna hangi büyülü bitkiyi katacağını fısıldadı.
+          </p>
+          <p class="lore-text">
+            Yedinci günün şafağında Rhaek gözlerini açtığında ellerinde tuttuğu şey artık sıradan bir silah 
+            değildi. Bıçağın yüzeyinde dalgalanan karanlık, çevresindeki ışığı yutarcasına titreşiyordu. 
+            Ama Rhaek'in saçları bir gecede tamamen ağarmıştı. Gölge sözünü tutmuştu — silah <em>ruhlanmıştı</em>. 
+            Ve bedel olarak Rhaek'in kendi gölgesini almıştı. O günden sonra Rhaek, güneşli günlerde bile 
+            gölgesi olmayan bir adam olarak yaşadı.
+          </p>
+
+          <h3 class="lore-chapter">III. Yolculuk ve Kirlenme</h3>
+          <p class="lore-text">
+            Silah yüzyıllar boyunca birçok el değiştirdi. Noxus'un istihbarat örgütü onu bir suikastçıya 
+            teslim etti; o suikastçı yirmi yıl içinde yüz elli hedefi ortadan kaldırdı ve gizemli bir şekilde 
+            kayboldu. Bıçak, Demacia'nın bir manastırında üç asır boyunca kilitleri korunan bir kasada uyudu. 
+            Bir Piltover mühendisi onu mekanik analize tabi tuttu; raporunda "belirsiz enerji imzası" dedi 
+            ve bir hafta sonra laboratuvarı yandı.
+          </p>
+          <p class="lore-text">
+            Her taşıyıcı bıçaktan <em>güç</em> aldı. Ve her taşıyıcı bıçağa bir şey <em>bıraktı</em>: 
+            anılarını, korkularını, en karanlık arzularını. Silah zamanla bu anıları özümsedi. Artık 
+            yalnızca bir alet değildi — bir kütüphane, bir hafıza, bir varlıktı.
+          </p>
+
+          <h3 class="lore-chapter">IV. Günümüz: Yeni Bir Ahit</h3>
+          <p class="lore-text">
+            Gölge Yemini bugün, Runeterra'nın en deneyimli suikastçılarının arasında fısıldanan bir efsanedir. 
+            Onu elde etmek için salt güç yetmez; bıçak, taşıyıcıyı seçer. Seçilen kişi ilk kez tuttuğunda 
+            yüzyılların birikmiş anısını bir anda zihninden geçer görür — tüm ölümleri, tüm ihyanetleri, 
+            tüm kahramanlıkları ve tüm pişmanlıkları. Buna dayanabilen, bıçağın gerçek sahibi olur.
+          </p>
+          <p class="lore-text">
+            Dayanamayan ise silahı bırakır ve hiçbir şeyi hatırlamaz. Sadece gölgesinin artık bir dakika 
+            gerisinde yürüdüğünü fark eder — sanki bir parçası hep orada, o bıçakla kalmış gibi.
+          </p>
+
+        </div>
+      </section>
+
+      <!-- ===== META ANALİZ ===== -->
+      <section id="meta">
+        <div class="divider"><span class="divider-icon">✦ META ANALİZ ✦</span></div>
+
+        <p class="section-label">Patch 14.9 Verileri</p>
+        <h2 class="section-title">Neden Meta Dominant?</h2>
+
+        <div class="meta-grid">
+          <div class="meta-card">
+            <span class="meta-card-icon">📊</span>
+            <p class="meta-card-label">Kazanma Oranı</p>
+            <p class="meta-card-value green">54.3%</p>
+          </div>
+          <div class="meta-card">
+            <span class="meta-card-icon">🎮</span>
+            <p class="meta-card-label">Seçim Oranı</p>
+            <p class="meta-card-value gold">38.7%</p>
+          </div>
+          <div class="meta-card">
+            <span class="meta-card-icon">🏆</span>
+            <p class="meta-card-label">Pro Oyun Oranı</p>
+            <p class="meta-card-value green">71%</p>
+          </div>
+          <div class="meta-card">
+            <span class="meta-card-icon">💎</span>
+            <p class="meta-card-label">Elmas+ Oranı</p>
+            <p class="meta-card-value green">61.2%</p>
+          </div>
+          <div class="meta-card">
+            <span class="meta-card-icon">⭐</span>
+            <p class="meta-card-label">Topluluk Puanı</p>
+            <p class="meta-card-value gold">9.4 / 10</p>
+          </div>
+          <div class="meta-card">
+            <span class="meta-card-icon">🔥</span>
+            <p class="meta-card-label">Efektif Hasar</p>
+            <p class="meta-card-value green">%+28</p>
+          </div>
+        </div>
+
+        <div class="ability-card">
+          <div class="ability-header">
+            <span class="ability-type-badge" style="color:#5dbb6a;border-color:rgba(93,187,106,0.4);background:rgba(93,187,106,0.08);">TASARIM NOTLARI</span>
+          </div>
+          <p class="ability-desc">
+            Gölge Yemini, mevcut meta'da suikastçıların karşılaştığı üç temel sorunu çözüyor:
+            <span class="val">Kalkan Birikmesi</span>, <span class="val">Hedef Seçim Riski</span> 
+            ve <span class="val">Yetersiz Sürdürülebilirlik</span>.
+          </p>
+          <p class="ability-desc">
+            Aktif becerinin kalkan azaltması, Locket + Immortal Shieldbow meta'sını doğrudan karşılıyor. 
+            Gölge Addımı pasifi ise birinci vuruş hasarını dramatik şekilde artırarak Suikastçıların 
+            "bir vuruşta öldür" fantazisini modern tank meta'sında bile gerçekleştirmesine imkân tanıyor.
+            <span class="val purple">Karanlık Ahit</span> yığınlama sistemi ise snowball potansiyelini 
+            daha erken açarak orta oyun baskısını güçlendiriyor.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== SİNERJİ ===== -->
+      <section id="synergy">
+        <div class="divider"><span class="divider-icon">✦ UYUMLULUK ✦</span></div>
+
+        <p class="section-label">En İyi Sinerjiler</p>
+        <h2 class="section-title">Hangi Suikastçıyla Oynanır?</h2>
+
+        <div class="synergy-grid">
+          <div class="synergy-card">
+            <span class="synergy-icon">⚡</span>
+            <div>
+              <p class="synergy-champ">Zed</p>
+              <p class="synergy-reason">Gölge Addımı, Zed'in Gölge klonu ile birlikte çift tetiklenip katlanmış hasar üretir. Aktif, W+E+Q kombinasyonu sonrasında mükemmel kapanış aracı sunar.</p>
+            </div>
+            <span class="synergy-tier-badge">S+</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">🔥</span>
+            <div>
+              <p class="synergy-champ">Talon</p>
+              <p class="synergy-reason">Parkur görünmezliği ile Gölge Yemini pasifi sinerji yapar. Duvar atlarken gölge bonusunu biriktirip inişte tüm pasiflerle beraber kullanmak mümkün.</p>
+            </div>
+            <span class="synergy-tier-badge">S+</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">🌸</span>
+            <div>
+              <p class="synergy-champ">Akali</p>
+              <p class="synergy-reason">Uzun görünmezlik süresi, Gölge Addımı'nın "görünmez hareket hızı" bonusunu sürekli aktif tutar. YH skalası Akali'nin hibrit hasarını destekler.</p>
+            </div>
+            <span class="synergy-tier-badge">S</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">🗡️</span>
+            <div>
+              <p class="synergy-champ">Katarina</p>
+              <p class="synergy-reason">Resetleme mekanik sayesinde Karanlık Ahit'i hızla 10 yığına çıkarır. Aktif dalganın multi-target hasarı Katarina'nın teamfight fantasiini tamamlar.</p>
+            </div>
+            <span class="synergy-tier-badge">S</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">💧</span>
+            <div>
+              <p class="synergy-champ">Qiyana</p>
+              <p class="synergy-reason">SD skalası Qiyana'nın yüksek AD oranlarını besler. Aktif atılım, Qiyana'nın ult öncesi pozisyonlanmasını kolaylaştırır ve combo akıcılığını artırır.</p>
+            </div>
+            <span class="synergy-tier-badge">A+</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">🎭</span>
+            <div>
+              <p class="synergy-champ">Shaco</p>
+              <p class="synergy-reason">Kutu tuzakları ve aldatmaca becerileriyle Gölge Yükü'nü kolayca yığar. Clone ult'u ile birlikte aktif "yanlış" klona kullanılırsa saniye kaza yapar.</p>
+            </div>
+            <span class="synergy-tier-badge">A+</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">🌙</span>
+            <div>
+              <p class="synergy-champ">Naafiri</p>
+              <p class="synergy-reason">Yeni suikastçı köpekleriyle elde edilen çoklu hit, Gölge Yükü'nü anında doldurur. Sürüsünün "çıplak" hasar çarpanlarıyla Karanlık Ahit skalası devasa etki yaratır.</p>
+            </div>
+            <span class="synergy-tier-badge">A+</span>
+          </div>
+          <div class="synergy-card">
+            <span class="synergy-icon">🦗</span>
+            <div>
+              <p class="synergy-champ">Kha'Zix</p>
+              <p class="synergy-reason">İzole hedef bonusu ile Gölge Addımı kombinasyonu, 1v1 potensiyelini patch tarihinin en yüksek seviyesine çıkarır. Uçuş evrimi kaçış rotalarını güvence altına alır.</p>
+            </div>
+            <span class="synergy-tier-badge">A</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FİYATLANDIRMA ===== -->
+      <section id="pricing">
+        <div class="divider"><span class="divider-icon">✦ FİYATLANDIRMA ✦</span></div>
+        <p class="section-label">Koleksiyon Paketi</p>
+        <h2 class="section-title">Gölge Yemini'ni Edin</h2>
+
+        <div class="pricing-grid">
+
+          <!-- Temel Paket -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="pricing-tier-label">STANDART</span>
+              <h3 class="pricing-name">Gölge Addımı</h3>
+              <p class="pricing-desc">Eşyayı ve temel görsel efektlerini içerir.</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-currency">₺</span>
+              <span class="price-amount">149</span>
+              <span class="price-period">,99</span>
+            </div>
+            <ul class="pricing-features">
+              <li>✦ Gölge Yemini Eşyası</li>
+              <li>✦ Temel Efekt Paketi</li>
+              <li>✦ 1 İkon Çerçevesi</li>
+              <li class="faded">✗ Özel Ses Paketi</li>
+              <li class="faded">✗ Animasyonlu Emote</li>
+              <li class="faded">✗ Koleksiyon Başlığı</li>
+            </ul>
+            <a href="#" class="btn-secondary" style="width:100%;justify-content:center;margin:0;">Satın Al</a>
+          </div>
+
+          <!-- Premium Paket (Öne Çıkan) -->
+          <div class="pricing-card featured">
+            <div class="pricing-badge-wrap">
+              <!-- position: relative → absolute badge için -->
+              <span class="pricing-popular-badge">EN POPÜLER</span>
+            </div>
+            <div class="pricing-header">
+              <span class="pricing-tier-label" style="color:var(--color-gold);">MİTİK</span>
+              <h3 class="pricing-name">Umbral Covenant</h3>
+              <p class="pricing-desc">Tüm özel efektler, ses ve koleksiyon içerikleriyle tam paket.</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-currency">₺</span>
+              <span class="price-amount">349</span>
+              <span class="price-period">,99</span>
+            </div>
+            <ul class="pricing-features">
+              <li>✦ Gölge Yemini Eşyası</li>
+              <li>✦ Premium Efekt Paketi</li>
+              <li>✦ 3 İkon Çerçevesi</li>
+              <li>✦ Özel Ses Paketi</li>
+              <li>✦ Animasyonlu Emote</li>
+              <li class="faded">✗ Koleksiyon Başlığı</li>
+            </ul>
+            <a href="#" class="btn-primary" style="width:100%;justify-content:center;">Hemen Al</a>
+          </div>
+
+          <!-- Efsane Paket -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="pricing-tier-label" style="color:var(--color-purple-light);">EFSANEVİ</span>
+              <h3 class="pricing-name">Karanlık Ahit</h3>
+              <p class="pricing-desc">Koleksiyoncular için sınırlı sayıda üretilmiş tam içerik paketi.</p>
+            </div>
+            <div class="pricing-price">
+              <span class="price-currency">₺</span>
+              <span class="price-amount">699</span>
+              <span class="price-period">,99</span>
+            </div>
+            <ul class="pricing-features">
+              <li>✦ Gölge Yemini Eşyası</li>
+              <li>✦ Efsanevi Efekt Paketi</li>
+              <li>✦ 5 İkon Çerçevesi</li>
+              <li>✦ Özel Ses Paketi</li>
+              <li>✦ 3 Animasyonlu Emote</li>
+              <li>✦ Koleksiyon Başlığı</li>
+            </ul>
+            <a href="#" class="btn-secondary" style="width:100%;justify-content:center;margin:0;">Satın Al</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section class="cta-section">
+        <div class="divider"><span class="divider-icon">✦</span></div>
+        <p class="item-tier" style="margin-bottom:var(--spacing-md);">Suikastçı Yolu Seni Bekliyor</p>
+        <h2 class="cta-title">Gölgeyle Ahit Yap</h2>
+        <p class="cta-subtitle">Patch 14.9 · Tüm Sunucular · Şimdi Kullanılabilir</p>
+        <div>
+          <a href="#" class="btn-primary">🎮 Oyuna Başla</a>
+          <a href="#stats" class="btn-secondary">📊 İstatistikleri Gör</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-top">
+      <span class="footer-brand">Gölge Yemini · League of Legends Fan Projesi</span>
+      <div class="footer-links">
+        <a href="#stats">İstatistikler</a>
+        <a href="#abilities">Yetenekler</a>
+        <a href="#lore">Hikaye</a>
+        <a href="#pricing">Fiyatlandırma</a>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <div class="disclaimer-icon">⚠️</div>
+      <div class="disclaimer-body">
+        <p class="disclaimer-title">Eğitim Amaçlı Proje — Ticari Değildir</p>
+        <p class="disclaimer-text">
+          Bu web sitesi, bir <strong>öğrenci ödevi</strong> kapsamında yalnızca HTML ve CSS becerilerini
+          geliştirme amacıyla hazırlanmıştır. Sitede yer alan fiyatlandırma bilgileri, ürün açıklamaları
+          ve pazarlama içerikleri <strong>tamamen kurgusaldır</strong>; hiçbir gerçek ürün veya hizmetin
+          satışını temsil etmez, ima etmez ya da amaçlamaz.
+        </p>
+        <p class="disclaimer-text">
+          <strong>League of Legends</strong> ve ilgili tüm içerikler (karakterler, eşya isimleri, oyun
+          mekaniği terimleri), <strong>Riot Games, Inc.</strong>'in tescilli ticari markası ve telif hakkı
+          kapsamındaki mülkiyetidir. Bu site Riot Games tarafından onaylı, sponsorlu veya bağlantılı değildir.
+          "Gölge Yemini" eşyası tamamen orijinal ve kurgusal bir konsepttir; resmi oyun içeriğini yansıtmaz.
+        </p>
+        <p class="disclaimer-text" style="margin-bottom:0;">
+          Tüm haklar saklıdır. Proje materyalleri ticari amaçla kullanılamaz, çoğaltılamaz veya dağıtılamaz.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-note">© 2024 Öğrenci Projesi · CSS/HTML Ödev 7 · Eğitim Amaçlıdır</span>
+      <span class="footer-note">Riot Games ile hiçbir ticari ilişki bulunmamaktadır.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll progress bar
+    const progress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progress.style.width = pct + '%';
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.style.borderBottomColor = window.scrollY > 50
+        ? 'rgba(200,155,60,0.35)'
+        : 'rgba(200,155,60,0.15)';
+    });
+
+    // Item icon easter egg: click to change emoji
+    const icons = ['🗡️','⚔️','🌑','💀','🔮','🌒','🪽'];
+    let iconIdx = 0;
+    document.querySelector('.item-icon').addEventListener('click', function() {
+      iconIdx = (iconIdx + 1) % icons.length;
+      this.textContent = icons[iconIdx];
+    });
+  </script>
+
+</body>
+</html>
