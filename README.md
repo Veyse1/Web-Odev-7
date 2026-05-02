@@ -2,6 +2,8 @@
 
 > **⚠️ Bu proje yalnızca eğitim amaçlıdır. Ticari bir amaç içermemektedir.**
 
+
+
 ---
 
 ## 🚨 Önemli Uyarı
@@ -19,16 +21,6 @@ Tüm fiyatlar ve içerikler tamamen kurgusaldır.
 Bu site Riot Games tarafından onaylı, sponsorlu veya bağlantılı değildir.
 "Gölge Yemini" tamamen orijinal ve kurgusal bir konsepttir.
 
----
-
-## 🌐 Site Linki
-
-> 🔗 **[https://kullaniciadi.github.io/golge-yemini](https://kullaniciadi.github.io/golge-yemini)**
->
-> *(GitHub Pages'e yükledikten sonra kendi kullanıcı adınla güncelle)*
-
-GitHub Pages'i etkinleştirmek için:
-`Repo → Settings → Pages → Branch: main → / (root) → Save`
 
 ---
 
