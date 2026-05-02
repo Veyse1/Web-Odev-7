@@ -93,7 +93,6 @@ golge-yemini/
 
 ## 📜 Lisans & Telif Hakkı
 
-Bu proje **MIT Lisansı** ile lisanslanmıştır — yalnızca eğitim amaçlı kullanım için.
 
 - **League of Legends** © Riot Games, Inc. — Tüm hakları saklıdır.
 - Bu site Riot Games ile hiçbir ticari, hukuki veya kurumsal ilişki içinde değildir.
